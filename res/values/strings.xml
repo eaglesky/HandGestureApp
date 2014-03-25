@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HandGestureApp</string>
+    <string name="action_save">Save Picture</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="data_collection">Data Collection</string>
+    <string name="train">Train</string>
+    <string name="test">Test</string>
+    <string name="AddGesture">Add\n Gesture</string>
+    <string name="chooser_title">Select a gesture</string>
+    <string name="map_apps">Map Apps</string>
+    <string name="title_activity_display_app_list">DisplayAppList</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_test">App Test</string>
+</resources>
