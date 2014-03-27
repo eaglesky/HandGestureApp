@@ -3,6 +3,7 @@ Yalun Qin (allenchin1990@gmail.com)
 03/24/2014
 
 Acknowledgments:
+
 1. I got the idea of presampling from Simen Andresen's blog: 
 http://simena86.github.io/blog/2013/08/12/hand-tracking-and-recognition-with-opencv/
 
