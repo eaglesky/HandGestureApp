@@ -1,5 +1,7 @@
 Hand Gesture Recognition App
+
 Yalun Qin (allenchin1990@gmail.com)
+
 03/24/2014
 
 Acknowledgments:
@@ -15,7 +17,7 @@ Installation:
 
 1. Before importing the project into Eclipse, make sure you have already
 installed and configured related tools, including Android SDK and OpenCV
-library. I used Android 4.4.2 and OpenCV 2.4.8. 
+library. In this project Android 4.4.2 and OpenCV 2.4.8 are used. 
 
 2. Download and import aFileChooser into Eclipse. Import HandGestureApp project into
 Eclipse and add aFileChooser to it(the setting is in Properties->Android).
@@ -29,19 +31,18 @@ Usage:
 mode. You can lower the resolution using the option in the menu to make the app run faster.
 After finished, just touch the screen and you will be in the second mode: hand
 sampling mode. You need to cover the seven squares with your hand. This step
-is the key to the performance and I suggest you bend your hand a little so that
+is crucial to the performance and I suggest you bend your hand a little so that
 the shadow could also be sampled. 
 
 2. After presampling you can touch the screen again and go into next mode to
 see the segmented hand. Touch again and you can see the extracted features,
 along with three buttons. In this mode you can add new gestures to the gesture
-database, train the SVM model or begin testing. I haven't implement deleting
-gestures yet so be careful when you want to add a new one. All the data of the
+database, train the SVM model or begin testing. The deletion of gestures has not been implemented yet so be careful when you want to add a new one. All the data of the
 gestures are stored in the ExternalStorageDirectory/MyDataSet folder. If you
 don't know the location on your phone, just click "Add Gesture" button and try
 to add a new gesture, the folder will be generated automatically in the
-external storage directory. You can use the existing data set I collected which
-is located in my project directory. You can click "Test" button to see the
+external storage directory. You can use the existing data set which
+is located in the project directory. You can click "Test" button to see the
 realtime recognition performance of SVM classifier, but make sure the model has
 already been generated, i.e., trained. 
 
