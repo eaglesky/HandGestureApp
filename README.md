@@ -4,17 +4,12 @@ Yalun Qin (allenchin1990@gmail.com)
 
 Acknowledgments:
 
-1. I got the idea of presampling from Simen Andresen's blog: 
-http://simena86.github.io/blog/2013/08/12/hand-tracking-and-recognition-with-opencv/
-
-2. In my code I used LibSVM on Android implemented by Kun Li:
-https://github.com/cnbuff410/Libsvm-androidjni
-
-3. In my code I used the file chooser library from here:
-https://github.com/iPaulPro/aFileChooser
-
-4. Part of the code implementing the package manager is from here:
-http://blog.csdn.net/qinjuning/article/details/6867806
+1. The idea of presampling is from Simen Andresen's [blog](http://simena86.github.io/blog/2013/08/12/hand-tracking-and-recognition-with-opencv/) 
+2. Used LibSVM on Android implemented by Kun Li.
+   [link](https://github.com/cnbuff410/Libsvm-androidjni)
+3. Used [aFileChooser library](https://github.com/iPaulPro/aFileChooser) to
+   implement the file chooser.
+4. To implement mapping human gestures to Android apps, [this article](http://blog.csdn.net/qinjuning/article/details/6867806) is quite helpful.
 
 Installation:
 
