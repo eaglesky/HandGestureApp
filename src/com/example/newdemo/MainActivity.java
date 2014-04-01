@@ -321,6 +321,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
     private native int doClassificationNative(float values[][], int indices[][],
     		int isProb, String modelFile, int labels[], double probs[]);
    
+    //SVM training which outputs a file named as "model" in MyDataSet
     private void train() {
     	// Svm training
     	int kernelType = 2; // Radial basis function
@@ -340,15 +341,13 @@ public class MainActivity extends Activity implements CvCameraViewListener2
     }
     
 	public void initLabel() {
-		//String path = Environment.getExternalStorageDirectory().toString()+"/";
-		//Log.d("Files", "Path: " + path);
 		       
 		File file[] = storeFolder.listFiles();
-	//	Log.d("Files", "Size: "+ file.length);
+	
 		int maxLabel = 0;
 		for (int i=0; i < file.length; i++)
 		{
-		  //  Log.d("Files", "FileName:" + file[i].getName());
+		 
 			String fullName = file[i].getName();
 			
 			final int dotId = fullName.lastIndexOf('.');
@@ -383,7 +382,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	            
 	                   int key = ois.readInt();
 	                   String value =(String) ois.readObject();
-//	                   Log.e("1222221",value);
+
 	                   Intent intent = Intent.parseUri(value, 0);
 	                   table.put(key, intent);
 	             }
@@ -449,6 +448,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	public void initOpenCV() {
 		
 	}
+	
+	//Things triggered by clicking any items in the menu start here
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
@@ -614,7 +615,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	
 	public void showDialog(final Context v, String title,String message, 
 			String posStr, String negStr, String neuStr){
-		//Log.i("Show Dialog", "Entered");
+	
 		
 		diagResult = null;
 		
@@ -696,6 +697,9 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  	    return false;
  	}
  	
+ 	//Called when user clicks "Data Collection" in the menu
+ 	//Starts a file chooser which lets the user chooses whatever gesture data he want to add
+ 	//Or add a new one
  	public void callDataCollection() {
  		if (mode != TRAIN_REC_MODE) {
  			Toast.makeText(getApplicationContext(), "Please do it in training mode!", Toast.LENGTH_SHORT).show();
@@ -707,13 +711,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  				dataPath = Environment.getExternalStorageDirectory().toString();
  			}
  			
- 		//	Intent intent = new Intent();  
- 		
- 		//	intent.setAction(Intent.ACTION_GET_CONTENT); 
- 		//	intent.setType("*/*");
- 			 
- 		//	startActivityForResult(Intent.createChooser(intent, "Choose A Gesture"), 1);
- 			
+  			
  			selectedLabel = -2;
  			chooserMode = DATA_COLLECTION_MODE;
  			showChooser();
@@ -722,6 +720,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  		}
  	}
  	
+ 	//Called when user clicks "Map Apps" in the menu
+ 	//Starts a file chooser that let user choose the gesture and app he want to match
  	public void callMapApps() {
  		if (mode != TRAIN_REC_MODE) {
  			Toast.makeText(getApplicationContext(), "Please do it in training mode!", Toast.LENGTH_SHORT).show();
@@ -733,13 +733,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  				dataPath = Environment.getExternalStorageDirectory().toString();
  			}
  			
- 		//	Intent intent = new Intent();  
- 		
- 		//	intent.setAction(Intent.ACTION_GET_CONTENT); 
- 		//	intent.setType("*/*");
- 			 
- 		//	startActivityForResult(Intent.createChooser(intent, "Choose A Gesture"), 1);
- 			
+ 	 			
  			selectedMappedLabel = -2;
  			chooserMode = MAP_APPS_MODE;
  			showChooser();
@@ -761,11 +755,16 @@ public class MainActivity extends Activity implements CvCameraViewListener2
          }
      }
 
+ 	 
+ 	 //This function deals with the results returned by file chooser triggered
+ 	 //by clicking "Data Collection" and "Map Apps" in the menu
+ 	 //RequestCode indicates which activity the request correspond to
      @Override
      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
          switch (requestCode) {
-             case REQUEST_CODE:
-                 // If the file selection was successful
+             case REQUEST_CODE: // Responding to the activity started by "Data Collection"
+            	                // and "Map Apps"
+           
                  if (resultCode == RESULT_OK) {
                      if (data != null) {
                          // Get the URI of the selected file
@@ -774,9 +773,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
                          try {
                              // Get the file path from the URI
                              final String path = FileUtils.getPath(this, uri);
-                           //  Toast.makeText(this,
-                            //         "File Selected: " + path, Toast.LENGTH_LONG).show();
-                             
+                          
                              int slashId = path.lastIndexOf('/');
                              int slashDot = path.lastIndexOf('.');
                              String selectedLabelStr = path.substring(slashId+1, slashDot);
@@ -791,6 +788,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	                  			
 	                  			} 
                              } else if (chooserMode == MAP_APPS_MODE) {
+                            	 
+                            	 //The label of choosen gesture to be matched
                             	 selectedMappedLabel = Integer.valueOf(selectedLabelStr);
                             	 
                             	 if (selectedMappedLabel != -2) {
@@ -805,12 +804,15 @@ public class MainActivity extends Activity implements CvCameraViewListener2
                  }
                  break;
                  
-             case REQUEST_SELECTED_APP:
+             case REQUEST_SELECTED_APP: //Responding to the activity started in callAppList()
             	 if (resultCode == RESULT_OK) {
             		 if (selectedMappedLabel != -2) {
+            			 
+            			 //Postion of selected app in the app list
             			 int position = data.getIntExtra("Position", -1);
             			 
             			 if (position != -1) {
+            				 
             				 table.put(selectedMappedLabel, mlistAppInfo.get(position).getIntent());
             				 Log.i(TAG, "selected Label = " + selectedMappedLabel +
             						 "Position = " + position);
@@ -818,8 +820,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
             			 else {
             				 
             			 }
-            				// Toast.makeText(getApplicationContext(), "Not a valid choice!", Toast.LENGTH_SHORT).show();
-            				 
+            			 
             		 }
             	 }
             	 break;
@@ -827,6 +828,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
          super.onActivityResult(requestCode, resultCode, data);
      }
  	
+     //Start a new activity containing a list of callable apps
      public void callAppList() {
     	 	Log.i(TAG, "Call App List!");
  
@@ -876,9 +878,9 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	        }  
 	    }  
      
+     //Called when user clicks "Add Gesture" button
  	public void addNewGesture(View view) {
- 	    // Do something in response to button click
- 		
+ 	   		
  		if (mode == TRAIN_REC_MODE) {
  		if (storeFolder != null) {
  			File myFile = new File(storeFolderName + DATASET_NAME);
@@ -954,7 +956,10 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  		
  	}
  	
- 	public void preTrain() { //Open or create training data set
+ 	//All the trained gestures jpg files and SVM training model, train_data.txt
+ 	//are stored in ExternalStorageDirectory/MyDataSet
+ 	//If MyDataSet doesn't exist, then it will be created in this function
+ 	public void preTrain() { 
  		 if (!isExternalStorageWritable()) {
  			 Toast.makeText(getApplicationContext(), "External storage is not writable!", Toast.LENGTH_SHORT).show();
 		 } else if (storeFolder == null) {
@@ -982,10 +987,12 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  		
  	}
  	
+ 	//Called when user clicks "Train" button
  	public void train(View view) {
  		train();
  	}
  	
+ 	//Called when user clicks "Test" button
  	public void test(View view) {
  		
  		if (mode == TRAIN_REC_MODE)
@@ -1074,6 +1081,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		cBackUpper[0][2] = cu3;
 	}
 	
+	//Initialize menu and resolution list.
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -1305,6 +1313,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			
 			String entry = hg.featureExtraction(rgbaMat, curLabel);
 			
+			//Collecting the frame data of a certain gesture and storing it in the file train_data.txt.
+			//This mode stops when the number of frames processed equals GES_FRAME_MAX
 			if (mode == ADD_MODE) {
 				gesFrameCount++;
 				Core.putText(rgbaMat, Integer.toString(gesFrameCount), new Point(10, 
@@ -1360,9 +1370,14 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 				}
 				
 				int isProb = 0;
+				
+				
 				String modelFile = storeFolderName + "/model";
 				int[] returnedLabel = {0};
 				double[] returnedProb = {0.0};
+				
+				//Predicted labels are stored in returnedLabel
+				//Since currently prediction is made for each frame, only returnedLabel[0] is useful.
 				int r = doClassificationNative(values, indices, isProb, modelFile, returnedLabel, returnedProb);
 				
 				if (r == 0) {
@@ -1370,13 +1385,16 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 					if (mode == TEST_MODE)
 					Core.putText(rgbaMat, Integer.toString(returnedLabel[0]), new Point(15, 
 							15), Core.FONT_HERSHEY_SIMPLEX, 0.6, mColorsRGB[0]);
-					else if (mode == APP_TEST_MODE) {
+					else if (mode == APP_TEST_MODE) { //Launching other apps
 						Core.putText(rgbaMat, Integer.toString(returnedLabel[0]), new Point(15, 
 								15), Core.FONT_HERSHEY_SIMPLEX, 0.6, mColorsRGB[2]);
 						
 						if (returnedLabel[0] != 0) {
 							
 							if (appTestFrameCount == APP_TEST_DELAY_NUM) {
+								
+								//Call other apps according to the predicted label
+								//This is done every APP_TEST_DELAY_NUM frames
 								callAppByLabel(returnedLabel[0]);
 							} else {
 								appTestFrameCount++;
@@ -1419,7 +1437,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		int rows = img.rows();
 		squareLen = rows/20;
 		Scalar color = mColorsRGB[2];  //Blue Outline
-		//Log.d(TAG, "cols: " + cols + ", rows: " + rows);
 		
 		
 		samplePoints[0][0].x = cols/2;
@@ -1708,7 +1725,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 	}
 	
-	//Generating binary image thresholded only by sampled hand colors
+	//Generates binary image thresholded only by sampled hand colors
 	void produceBinHandImg(Mat imgIn, Mat imgOut)
 	{
 		for (int i = 0; i < SAMPLE_NUM; i++)
@@ -1740,6 +1757,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		Imgproc.medianBlur(imgOut, imgOut, 3);
 	}
 	
+	//Generates binary image thresholded only by sampled background colors
 	void produceBinBackImg(Mat imgIn, Mat imgOut)
 	{
 		for (int i = 0; i < SAMPLE_NUM; i++)
@@ -1889,11 +1907,9 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 								
 							} else {
 							   
-							    //	Point dis = new Point(prevPoint.x-curPoint0.x, prevPoint.y-curPoint.y);
-							    	
-							   // 	if (dis.x*dis.x + dis.y*dis.y >= 400) {
-							    		hg.fingerTipsOrdered.put(finAngle0, curPoint0);
-							   // 	}
+							   
+							  		hg.fingerTipsOrdered.put(finAngle0, curPoint0);
+							  
 							    	
 							    	hg.fingerTipsOrdered.put(finAngle1, curPoint1);
 							    
@@ -1939,7 +1955,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		hg.findBiggestContour();
 		
 		if (hg.cMaxId > -1) {
-			//Imgproc.drawContours(rgbaMat, hg.contours, hg.cMaxId, mColorsRGB[0], 1);
 			
 			hg.boundingRect = Imgproc.boundingRect(hg.contours.get(hg.cMaxId));
 			
@@ -1949,7 +1964,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 		if (hg.detectIsHand(rgbaMat)) {
 
-		//	Core.rectangle(rgbaMat, hg.boundingRect.tl(), hg.boundingRect.br(), mColorsRGB[1], 2);
 			return hg.boundingRect;
 		} else
 			return null;
@@ -1997,12 +2011,12 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		        for (Map.Entry<Integer, Intent> entry : table.entrySet()) {  
 		        	  
 		          oos.writeInt(entry.getKey());
-		          String tmp =entry.getValue().toURI();//���������Ҫ��ǧ��Ҫ�Ҹģ����л�
+		          String tmp =entry.getValue().toURI();
 		          Log.e("111111",tmp);
 		          oos.writeObject(tmp);
 		        }
 		        
-//		        oos.writeObject(table);
+
 		        Log.e("Ob","write succeeded......");
 		        oos.close();
 		        Log.e("Write","write succeeded......");

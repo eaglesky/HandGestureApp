@@ -46,7 +46,16 @@ is located in the project directory. You can click "Test" button to see the
 realtime recognition performance of SVM classifier, but make sure the model has
 already been generated, i.e., trained. 
 
-3. This app can also let you quickly launch other apps using gestures. But first you need to
+3. To add a new gesture to the training set, simply make a static gesture
+   before the camera and click "Add Gesture" button. If you want to increase
+   the number of a gesture that is already in the training set, you need to
+   click "Data Collection" in the menu and choose the image representing the
+   gesture, and then click "Add Gesture" button. After you click that button,
+   the app will start gathering data immediately for a certain number of
+   frames(currently the number is set to be 10). Finally a dialog will pop up
+   asking you wheather to save those data or not.
+
+4. This app can also let you quickly launch other apps using gestures. But first you need to
 map your gestures to the apps by selecting "Map Apps" in the menu. The
 selection is stored in the app so you don't need to map it every time you run
 the app. Then you can test it by choosing the "App Test" in the menu.
