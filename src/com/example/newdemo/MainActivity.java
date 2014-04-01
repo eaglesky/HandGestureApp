@@ -43,20 +43,16 @@ import org.opencv.core.Rect;
 import org.opencv.highgui.Highgui;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.imgproc.Moments;
-//import org.opencv.video.BackgroundSubtractorMOG;
 
 import com.example.newdemo.AppInfo;
 import com.example.newdemo.BrowseApplicationInfoAdapter;
-//import android.R;
 import com.example.newdemo.R;
 import com.ipaulpro.afilechooser.utils.FileUtils;
-//import com.ipaulpro.afilechooserexample.FileChooserExampleActivity;
 
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-//import android.provider.MediaStore;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -68,7 +64,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
-//import android.database.Cursor;
 import android.hardware.Camera;
 import android.hardware.Camera.AutoFocusCallback;
 import android.support.v4.view.MotionEventCompat;
@@ -84,14 +79,18 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-//import android.hardware.Camera.Size;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends Activity implements CvCameraViewListener2
 {
 
+    //Just for debugging
 	private static final String TAG = "HandGestureApp";
+
+    //Color Space used for hand segmentation
 	private static final int COLOR_SPACE = Imgproc.COLOR_RGB2Lab;
+
+    //Number of frames collected for each gesture in the training set
 	private static final int GES_FRAME_MAX= 10;
 	
 	public final Object sync = new Object();
@@ -120,7 +119,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	private static final int REQUEST_CODE = 6384; // onActivityResult request
 	private static final int REQUEST_SELECTED_APP = 1111;
 	
-      // code
 	private String diagResult = null;
 	private Handler mHandler = new Handler();
 	private static final String DATASET_NAME = "/train_data.txt";
@@ -128,7 +126,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	private String storeFolderName = null;
 	private File storeFolder = null;
 	private FileWriter fw = null;
-	
+
+    //Stores the mapping results from gesture labels to app intents
 	private HashMap<Integer, Intent> table = new HashMap<Integer, Intent>();
 	
 	   
@@ -140,6 +139,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
     
 	private List<android.hardware.Camera.Size> mResolutionList;
 	
+	//Initial mode is BACKGROUND_MODE to presample the colors of the hand
 	private int mode = BACKGROUND_MODE;
 	private int chooserMode = DATA_COLLECTION_MODE;
 	
@@ -221,6 +221,9 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 				mOpenCvCameraView.enableView();
 				
 				 mOpenCvCameraView.setOnTouchListener(new OnTouchListener() {
+					 
+					 //Called when user touch the view screen
+					 //Mode flow: BACKGROUND_MODE --> SAMPLE_MODE --> DETECTION_MODE <--> TRAIN_REC_MODE
 	    	    	    public boolean onTouch(View v, MotionEvent event) {
 	    	    	        // ... Respond to touch events 
 	    	    	    	 int action = MotionEventCompat.getActionMasked(event);
@@ -234,6 +237,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	    	    	    	            	toastStr = "Sampling Finished!";
 	    	    	    	            } else if (mode == DETECTION_MODE) {
 	    	    	    	            	mode = TRAIN_REC_MODE;
+	    	    	    	         
 	    	    	    	            	((Button)findViewById(R.id.AddBtn)).setVisibility(View.VISIBLE);
 	    	    	    	            	((Button)findViewById(R.id.TrainBtn)).setVisibility(View.VISIBLE);
 	    	    	    	            	((Button)findViewById(R.id.TestBtn)).setVisibility(View.VISIBLE);
@@ -1232,11 +1236,15 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	//	releaseCVMats();
 	}
 
+	
+	//Called when each frame data gets received
+	//inputFrame contains the data for each frame
+	//Mode flow: BACKGROUND_MODE --> SAMPLE_MODE --> DETECTION_MODE <--> TRAIN_REC_MODE
 	@Override
 	public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
-		// TODO Auto-generated method stub
 		rgbaMat = inputFrame.rgba();
-		//Mat ret = new Mat();
+		
+		
 		Core.flip(rgbaMat, rgbaMat, 1);
 		
 		
@@ -1244,21 +1252,22 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 		Imgproc.cvtColor(rgbaMat, rgbMat, Imgproc.COLOR_RGBA2RGB);
 		
+		//Convert original RGB colorspace to the colorspace indicated by COLR_SPACE
 		Imgproc.cvtColor(rgbaMat, interMat, COLOR_SPACE);
 		
 		
 		
-		if (mode == SAMPLE_MODE) {
+		if (mode == SAMPLE_MODE) { //Second mode which presamples the colors of the hand  
 		
 			preSampleHand(rgbaMat);
 			
-		} else if (mode == DETECTION_MODE) {
-			
+		} else if (mode == DETECTION_MODE) { //Third mode which generates the binary image containing the
+			                                 //segmented hand represented by white color
 			produceBinImg(interMat, binMat);
 			
 			
 			return binMat;
-		//	return binDifMat;
+		
 		
 		} else if ((mode == TRAIN_REC_MODE)||(mode == ADD_MODE)
 		|| (mode == TEST_MODE) || (mode == APP_TEST_MODE)){
@@ -1377,6 +1386,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		}
 	}
 	
+	//Presampling hand colors.
+	//Output is avgColor, which is essentially a 7 by 3 matrix storing the colors sampled by seven squares
 	void preSampleHand(Mat img)
 	{
 		int cols = img.cols();
@@ -1412,7 +1423,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			Core.rectangle(img,  samplePoints[i][0], samplePoints[i][1], color, 1);
 		}
 		
-		//average(interMat);
+		
 		
 		for (int i = 0; i < SAMPLE_NUM; i++)
 		{
@@ -1425,13 +1436,15 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 	}
 	
+	//Presampling background colors.
+    //Output is avgBackColor, which is essentially a 7 by 3 matrix storing the colors sampled by seven squares
 	void preSampleBack(Mat img)
 	{
 		int cols = img.cols();
 		int rows = img.rows();
 		squareLen = rows/20;
 		Scalar color = mColorsRGB[2];  //Blue Outline
-		//Log.d(TAG, "cols: " + cols + ", rows: " + rows);
+		
 		
 		
 		samplePoints[0][0].x = cols/6;
@@ -1460,7 +1473,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			Core.rectangle(img,  samplePoints[i][0], samplePoints[i][1], color, 1);
 		}
 		
-		//average(interMat);
+		
 		
 		for (int i = 0; i < SAMPLE_NUM; i++)
 		{
@@ -1472,55 +1485,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 	}
 	
-	void average(Mat img)
-	{
 	
-		for (int i = 0; i < 3; i++)
-			averChans.get(i).clear();
-		
-		sampleColorMats.clear();
-		
-		for (int i = 0; i < SAMPLE_NUM; i++)
-		{
-			//subImg = img.submat((int)samplePoints[i][0].y+2, (int)samplePoints[i][1].y-2, 
-			//		(int)samplePoints[i][0].x+2, (int)samplePoints[i][1].x-2);
-			Mat roiSample = new Mat(img, new Rect((int)samplePoints[i][0].x+2, (int)samplePoints[i][0].y+2, squareLen-4, squareLen-4));
-			Mat tmpSample = new Mat();
-			roiSample.copyTo(tmpSample);
-			sampleColorMats.add(tmpSample);
-			
-			for (int x = (int)samplePoints[i][0].x+2; x <= (int)samplePoints[i][1].x-2; x++)
-			{
-				for (int y = (int)samplePoints[i][0].y+2; y <= (int)samplePoints[i][1].y-2; y++)
-				{
-					channelsPixel = img.get(y, x);
-					
-					if ((x == (int)samplePoints[i][0].x+2)&&
-							(y == (int)samplePoints[i][0].y+2))
-						//Log.d(TAG, "ref " + x + ", " + y + ": " + channelsPixel[0] + ", "
-						//		+ channelsPixel[1] + ", " + channelsPixel[2]);
-					
-					for (int j = 0; j < 3; j++)
-					{
-						averChans.get(j).add(Double.valueOf(channelsPixel[j]));
-					}
-				}
-			}
-			for (int j = 0; j < 3; j++)
-		    {
-				Collections.sort(averChans.get(j));
-				int len = averChans.get(j).size();
-				
-				
-				if (mode == BACKGROUND_MODE)
-					avgBackColor[i][j] = averChans.get(j).get(len/2).doubleValue();
-				else if (mode == SAMPLE_MODE)
-					avgColor[i][j] = averChans.get(j).get(len/2).doubleValue();
-				
-				//Log.d(TAG, i + ", " + j + ":" + avgColor[i][j]);
-		    }
-		}
-	}
 	
 		
 	void boundariesCorrection()
