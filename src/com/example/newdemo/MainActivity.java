@@ -95,18 +95,38 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	
 	public final Object sync = new Object();
 	
+	//Mode that presamples hand colors
 	public static final int SAMPLE_MODE = 0;
-	public static final int DETECTION_MODE = 1;
+	
+	//Mode that generates binary image
+	public static final int DETECTION_MODE = 1; 
+	
+	//Mode that displays color image together with contours, fingertips,
+	//defect points and so on.
 	public static final int TRAIN_REC_MODE = 2;
+	
+	//Mode that presamples background colors
 	public static final int BACKGROUND_MODE = 3;
-	public static final int ADD_MODE = 4;
-	public static final int TEST_MODE = 5;
-	public static final int APP_TEST_MODE = 6;
 	
-	public static final int DATA_COLLECTION_MODE = 0;
-	public static final int MAP_APPS_MODE = 1;
+	//Mode that is started when user clicks the 'Add Gesture' button.
+	public static final int ADD_MODE = 4;    
 	
-	private static final int FRAME_BUFFER_NUM = 1;
+	//Mode that is started when user clicks the 'Test' button.
+	public static final int TEST_MODE = 5;    
+	
+	//Mode that is started when user clicks 'App Test' in the menu.
+	public static final int APP_TEST_MODE = 6;  
+	
+	//Mode that is started when user clicks 'Data Collection' in the menu.
+	public static final int DATA_COLLECTION_MODE = 0; 
+	
+	//Mode that is started when user clicks 'Map Apps' in the menu.
+	public static final int MAP_APPS_MODE = 1;   
+	
+	//Number of frames used for prediction
+	private static final int FRAME_BUFFER_NUM = 1; 
+	
+	//Frame interval between two launching events
 	private static final int APP_TEST_DELAY_NUM = 10;
 	
 	private boolean isPictureSaved = false;
@@ -116,7 +136,9 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	private float[][] values = new float[FRAME_BUFFER_NUM][];
 	private int[][] indices = new int[FRAME_BUFFER_NUM][];
 	
-	private static final int REQUEST_CODE = 6384; // onActivityResult request
+	// onActivityResult request
+	private static final int REQUEST_CODE = 6384; 
+	
 	private static final int REQUEST_SELECTED_APP = 1111;
 	
 	private String diagResult = null;
@@ -141,6 +163,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	
 	//Initial mode is BACKGROUND_MODE to presample the colors of the hand
 	private int mode = BACKGROUND_MODE;
+	
 	private int chooserMode = DATA_COLLECTION_MODE;
 	
 	private static final int SAMPLE_NUM = 7;
@@ -189,6 +212,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
     
     private Scalar               mColorsRGB[] = null;
     
+    //Stores all the information about the hand
 	private HandGesture hg = null;
 	
 	private int imgNum;
@@ -198,6 +222,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	private int curMaxLabel = 0;
 	private int selectedMappedLabel = -2;
 	
+	//Stores string representation of features to be written to train_data.txt
 	private ArrayList<String> feaStrs = new ArrayList<String>();
 	
 	File sdCardDir = Environment.getExternalStorageDirectory();
@@ -1269,7 +1294,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			return binMat;
 		
 		
-		} else if ((mode == TRAIN_REC_MODE)||(mode == ADD_MODE)
+		} else if ((mode == TRAIN_REC_MODE)||(mode == ADD_MODE) 
 		|| (mode == TEST_MODE) || (mode == APP_TEST_MODE)){
 		
 			produceBinImg(interMat, binMat);
@@ -1364,7 +1389,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			}
 			
 	
-		} else if (mode == BACKGROUND_MODE) {
+		} else if (mode == BACKGROUND_MODE) { //First mode which presamples background colors
 			preSampleBack(rgbaMat);
 		} 
 		
@@ -1636,6 +1661,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 	}
 	
+	//Generates binary image containing user's hand
 	void produceBinImg(Mat imgIn, Mat imgOut)
 	{
 		int colNum = imgIn.cols();
@@ -1682,6 +1708,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 	}
 	
+	//Generating binary image thresholded only by sampled hand colors
 	void produceBinHandImg(Mat imgIn, Mat imgOut)
 	{
 		for (int i = 0; i < SAMPLE_NUM; i++)
@@ -1709,8 +1736,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		}
 		
 	
-		
-		blackCorners(imgOut);
 		
 		Imgproc.medianBlur(imgOut, imgOut, 3);
 	}
@@ -1743,8 +1768,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 		Core.bitwise_not(imgOut, imgOut);
 		
-			
-		blackCorners(imgOut);
 		
 		Imgproc.medianBlur(imgOut, imgOut, 7);
 		
@@ -1932,13 +1955,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			return null;
 	}
 	
-	void blackCorners(Mat img)
-	{
-		int cols = img.cols();
-		int rows = img.rows();
-		
-		
-	}
+	
 	
 	@Override
 	public void onPause(){
