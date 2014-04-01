@@ -879,6 +879,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	    }  
      
      //Called when user clicks "Add Gesture" button
+     //Prepare train_data.txt file and set the mode to be ADD_MODE
  	public void addNewGesture(View view) {
  	   		
  		if (mode == TRAIN_REC_MODE) {
@@ -931,6 +932,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
  		
  	}
  	
+ 	//Write the strings of features to the file train_data.txt
+ 	//Save the screenshot of the gesture
  	public void doAddNewGesture() {
  		try {
  		for (int i = 0; i < feaStrs.size(); i++) {
@@ -1814,6 +1817,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 	{
 		hg.contours.clear();
 		Imgproc.findContours(binMat, hg.contours, hg.hie, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_NONE);
+		
+		//Find biggest contour and return the index of the contour, which is hg.cMaxId
 		hg.findBiggestContour();
 		
 		if (hg.cMaxId > -1) {
@@ -1822,8 +1827,10 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 			Imgproc.approxPolyDP(hg.approxContour, hg.approxContour, 2, true);
 			hg.contours.get(hg.cMaxId).fromList(hg.approxContour.toList());
 			
+			//hg.contours.get(hg.cMaxId) represents the contour of the hand
 			Imgproc.drawContours(rgbaMat, hg.contours, hg.cMaxId, mColorsRGB[0], 1);
 			
+			//Palm center is stored in hg.inCircle, radius of the inscribed circle is stored in hg.inCircleRadius
 			hg.findInscribedCircle(rgbaMat);
 			
 			
@@ -1844,6 +1851,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 				lp.add(contourPts[cId[i]]);
 				//Core.circle(rgbaMat, contourPts[cId[i]], 2, new Scalar(241, 247, 45), -3);
 			}
+			
+			//hg.hullP.get(hg.cMaxId) returns the locations of the points in the convex hull of the hand
 			hg.hullP.get(hg.cMaxId).fromList(lp);
 			lp.clear();
 			
@@ -1930,6 +1939,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2
 		
 		if (hg.detectIsHand(rgbaMat)) {
 
+			//hg.boundingRect represents four coordinates of the bounding box. 
 			Core.rectangle(rgbaMat, hg.boundingRect.tl(), hg.boundingRect.br(), mColorsRGB[1], 2);
 			Imgproc.drawContours(rgbaMat, hg.hullP, hg.cMaxId, mColorsRGB[2]);
 		}

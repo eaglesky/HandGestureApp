@@ -184,6 +184,7 @@ public class HandGesture {
 					finTipsTemp.add(fin0);
 					finTipsTemp.add(fin1);
 					
+					//Valid defect point is stored in curDefectPoint
 					Core.circle(img, curDefectPoint, 2, new Scalar(0, 0, 255), -5);
 				
 					countId++;
@@ -224,6 +225,7 @@ public class HandGesture {
 				features.add(f1);
 				features.add(f2);
 				
+				//curFinPoint stores the location of the finger tip
 				Core.line(img, inCircle, curFinPoint, new Scalar(24, 77, 9), 2);
 				Core.circle(img, curFinPoint, 2, Scalar.all(0), -5);
 				
