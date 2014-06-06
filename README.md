@@ -16,7 +16,7 @@ Acknowledgments:
 Installation:
 
 1. Before importing the project into Eclipse, make sure you have already
-installed and configured related tools, including Android SDK and OpenCV
+installed and configured related tools, including Android SDK, Android NDK and OpenCV
 library. In this project Android 4.4.2 and OpenCV 2.4.8 are used. 
 
 2. Download and import aFileChooser into Eclipse. Import HandGestureApp project into
@@ -61,3 +61,6 @@ selection is stored in the app so you don't need to map it every time you run
 the app. Then you can test it by choosing the "App Test" in the menu.
 
 A demo of the app can be found on YouTube: http://youtu.be/PF6hY-0VuN4
+
+If you find any problems about the code, feel free to contact me. Any feedback
+is greatly appriciated! ^_^
