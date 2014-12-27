@@ -99,6 +99,7 @@ public class HandGesture {
 		return isHand;
 	}
 	
+	//Convert the feature indicated by label to the string used in SVM input file
 	String feature2SVMString(int label)
 	{
 		String ret = Integer.toString(label) + " ";
@@ -112,6 +113,7 @@ public class HandGesture {
 		return ret;
 	}
 	
+	//Extract hand features from img 
 	String featureExtraction(Mat img, int label)
 	{
 		String ret = null;
@@ -249,6 +251,7 @@ public class HandGesture {
 	public native double findInscribedCircleJNI(long imgAddr, double rectTLX, double rectTLY,
 			double rectBRX, double rectBRY, double[] incircleX, double[] incircleY, long contourAddr);
 	
+	// Find the location of inscribed circle and return the radius and the center location
 	void findInscribedCircle(Mat img)
 	{
 		
