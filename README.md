@@ -1,10 +1,10 @@
-Hand Gesture Recognition App
+# Hand Gesture Recognition App
 
 Yalun Qin (allenchin1990@gmail.com)
 
 03/24/2014
 
-Acknowledgments:
+## Acknowledgments:
 
 1. The idea of presampling is from Simen Andresen's [blog](http://simena86.github.io/blog/2013/08/12/hand-tracking-and-recognition-with-opencv/) 
 2. Used LibSVM on Android implemented by Kun Li.
@@ -13,7 +13,7 @@ Acknowledgments:
    implement the file chooser.
 4. To implement mapping human gestures to Android apps, [this article](http://blog.csdn.net/qinjuning/article/details/6867806) is quite helpful.
 
-Installation:
+## Installation:
 
 1. Before importing the project into Eclipse, make sure you have already
 installed and configured related tools, including Android SDK, Android NDK and OpenCV
@@ -25,7 +25,7 @@ Eclipse and add aFileChooser to it(the setting is in Properties->Android).
 3. Make sure OpenCV Manager is installed on your Android phone and then run
 HandGestureApp project.
 
-Usage:
+## Usage:
 
 1. The first mode you are in upon starting the app is background sampling
 mode. You can lower the resolution using the option in the menu to make the app run faster.
@@ -60,7 +60,6 @@ map your gestures to the apps by selecting "Map Apps" in the menu. The
 selection is stored in the app so you don't need to map it every time you run
 the app. Then you can test it by choosing the "App Test" in the menu.
 
-A demo of the app can be found on YouTube: http://youtu.be/PF6hY-0VuN4
+A demo of the app can be found on YouTube: http://youtu.be/PF6hY-0VuN4 
 
-If you find any problems about the code, feel free to contact me. Any feedback
-is greatly appriciated! ^_^
+If you find any problem about the code, **feel free to create an issue to report it**. Also feel free to refactor the code and send pull requests to me. It would be great if we could improve this project together!
