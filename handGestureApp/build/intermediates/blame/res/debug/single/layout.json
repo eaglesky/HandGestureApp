@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/res/merged/debug/layout/home.xml",
+        "source": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/src/main/res/layout/home.xml"
+    },
+    {
+        "merged": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/res/merged/debug/layout/file.xml",
+        "source": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/exploded-aar/HandGestureApp-master/aFileChooser/unspecified/res/layout/file.xml"
+    },
+    {
+        "merged": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/res/merged/debug/layout/file.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/layout/file.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/handGestureApp/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/res/merged/debug/layout/activity_display_app_list.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/handGestureApp/src/main/res/layout/activity_display_app_list.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/res/merged/debug/layout/browse_app_list.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/handGestureApp/src/main/res/layout/browse_app_list.xml"
+    },
+    {
+        "merged": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/res/merged/debug/layout/activity_display_app_list.xml",
+        "source": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/src/main/res/layout/activity_display_app_list.xml"
+    },
+    {
+        "merged": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/res/merged/debug/layout/browse_app_item.xml",
+        "source": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/src/main/res/layout/browse_app_item.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/res/merged/debug/layout/browse_app_item.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/handGestureApp/src/main/res/layout/browse_app_item.xml"
+    },
+    {
+        "merged": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/build/intermediates/res/merged/debug/layout/browse_app_list.xml",
+        "source": "/home/allen/Downloads/HandGestureApp-master/handGestureApp/src/main/res/layout/browse_app_list.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/handGestureApp/build/intermediates/res/merged/debug/layout/home.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/handGestureApp/src/main/res/layout/home.xml"
+    }
+]
