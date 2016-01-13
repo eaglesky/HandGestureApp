@@ -11,9 +11,9 @@ Yalun Qin (allenchin1990@gmail.com)
 3. Used [aFileChooser library](https://github.com/iPaulPro/aFileChooser) to implement the file chooser.
 4. To implement mapping human gestures to Android apps, [this article](http://blog.csdn.net/qinjuning/article/details/6867806) is quite helpful.
 
-** This is the new Android Studio project! If you miss the old Eclipse ADT project, check out the other branch "eclipse_adt_old" **
+**This is the new Android Studio project! If you miss the old Eclipse ADT project, check out the other branch "eclipse_adt_old"**
 
-** @raquezha also made great efforts in making the original project work with Android Studio. Check out his project https://github.com/raquezha/HandGestureApp too.  Thanks for his work! 
+**@raquezha also made great efforts in making the original project work with Android Studio. Check out his project https://github.com/raquezha/HandGestureApp too. Thanks for his work!** 
 
 ## Installation:
 
