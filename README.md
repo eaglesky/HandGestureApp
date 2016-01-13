@@ -20,7 +20,7 @@ Yalun Qin (allenchin1990@gmail.com)
 1. Before importing the project into Android Studio (mine is the 1.5 version), make sure you have already installed and configured related tools, including Android SDK, Android NDK. In this project Android 4.4.2 and OpenCV 2.4.9 are used. **I have already imported the OpenCV for Android Library and its native code so you don't have to download or import it yourself ^_^**. 
 You can download and install NDK from "Project Structure" -> "SDK Location" -> "Download Android NDK", or download from the website(http://developer.android.com/ndk/downloads/index.html) and follow the instructions to install(make sure you fill in the NDK path in "Project Structure"/"SDK Location"/"Android NDK location"). Then **be sure to follow this post (http://kn-gloryo.github.io/Build_NDK_AndroidStudio_detail/, [video](https://www.youtube.com/watch?v=RmPuwdxR1qs)) to configure NDK tools**. This will make your life with NDK much easier! 
 
-2. Import the project into Android Studio. Build the jni libraries libHandGestureApp.so and libsignal.so by right click on app/sr c/main/jni and choose NDK -> ndk build. This will call the ndk build tool and generate those two jni libraries in app/src/main/libs. This must be down if you change the c++ source files in the jni folder. 
+2. Import the project into Android Studio. Build the jni libraries libHandGestureApp.so and libsignal.so by right click on app/sr c/main/jni and choose NDK -> ndk build. This will call the ndk build tool and generate those two jni libraries in app/src/main/libs. This must be done if you change the c++ source files in the jni folder. 
 
 3. Make sure OpenCV Manager has been installed on your Android phone and then build and run the project!
 
