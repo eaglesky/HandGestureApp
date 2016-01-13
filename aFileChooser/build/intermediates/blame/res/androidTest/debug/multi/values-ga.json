@@ -79,5 +79,86 @@
                 }
             }
         ]
+    },
+    {
+        "outputFile": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/values-ga/values-ga.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 56,
+                    "endOffset": 107
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values-ga/values-ga.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 56,
+                        "endOffset": 107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 112,
+                    "endColumn": 62,
+                    "endOffset": 170
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values-ga/values-ga.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 62,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 175,
+                    "endColumn": 90,
+                    "endOffset": 261
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values-ga/values-ga.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endColumn": 90,
+                        "endOffset": 261
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 266,
+                    "endColumn": 91,
+                    "endOffset": 353
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values-ga/values-ga.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 266,
+                        "endColumn": 91,
+                        "endOffset": 353
+                    }
+                }
+            }
+        ]
     }
 ]

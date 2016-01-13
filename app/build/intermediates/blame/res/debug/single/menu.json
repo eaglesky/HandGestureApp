@@ -4,6 +4,14 @@
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/menu/display_app_list.xml"
     },
     {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/menu/display_app_list.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/src/main/res/menu/display_app_list.xml"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/src/main/res/menu/main.xml"
+    },
+    {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/menu/main.xml"
     }

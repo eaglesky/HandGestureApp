@@ -4,8 +4,8 @@ obj/local/armeabi-v7a/objs/HandGestureApp/jni_process.o: \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/cdefs.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/cdefs_elf.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/api-level.h \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/core.hpp \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/types_c.h \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/core.hpp \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/types_c.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/assert.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/stdlib.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/string.h \
@@ -33,19 +33,19 @@ obj/local/armeabi-v7a/objs/HandGestureApp/jni_process.o: \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/machine/limits.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/sys/syslimits.h \
  /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/asm/page.h \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/version.hpp \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/version.hpp \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/cmath \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/cstddef \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/complex \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/operations.hpp \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/operations.hpp \
  /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/limits \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/mat.hpp \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/imgproc/imgproc.hpp \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/imgproc/types_c.h \
- /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/core_c.h
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/mat.hpp \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/imgproc/imgproc.hpp \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/imgproc/types_c.h \
+ jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/core_c.h
 
 /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/jni.h:
 
@@ -55,9 +55,9 @@ obj/local/armeabi-v7a/objs/HandGestureApp/jni_process.o: \
 
 /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/android/api-level.h:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/core.hpp:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/core.hpp:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/types_c.h:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/types_c.h:
 
 /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/assert.h:
 
@@ -113,7 +113,7 @@ obj/local/armeabi-v7a/objs/HandGestureApp/jni_process.o: \
 
 /home/allen/Android/Sdk/ndk-bundle/platforms/android-3/arch-arm/usr/include/asm/page.h:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/version.hpp:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/version.hpp:
 
 /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
 
@@ -127,14 +127,14 @@ obj/local/armeabi-v7a/objs/HandGestureApp/jni_process.o: \
 
 /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/operations.hpp:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/operations.hpp:
 
 /home/allen/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.8/include/limits:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/mat.hpp:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/mat.hpp:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/imgproc/imgproc.hpp:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/imgproc/imgproc.hpp:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/imgproc/types_c.h:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/imgproc/types_c.h:
 
-/home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/include/opencv2/core/core_c.h:
+jni/../../../../openCVLibrary249/sdk/native/jni/include/opencv2/core/core_c.h:

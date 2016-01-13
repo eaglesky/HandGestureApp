@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-include /home/allen/Downloads/OpenCV-2.4.9-android-sdk/sdk/native/jni/OpenCV.mk
+include $(LOCAL_PATH)/../../../../openCVLibrary249/sdk/native/jni/OpenCV.mk
 
 LOCAL_MODULE    := HandGestureApp
 LOCAL_SRC_FILES := jni_process.cpp

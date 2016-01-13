@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/layout/file.xml",
+        "source": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/layout/file.xml"
+    },
+    {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/layout/file.xml",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/layout/file.xml"
     }

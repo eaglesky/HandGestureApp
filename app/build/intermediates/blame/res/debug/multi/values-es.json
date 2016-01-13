@@ -1,5 +1,86 @@
 [
     {
+        "outputFile": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/values-es/values-es.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 61,
+                    "endOffset": 112
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-es/values-es.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 61,
+                        "endOffset": 112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 117,
+                    "endColumn": 60,
+                    "endOffset": 173
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-es/values-es.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 117,
+                        "endColumn": 60,
+                        "endOffset": 173
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 178,
+                    "endColumn": 80,
+                    "endOffset": 254
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-es/values-es.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 178,
+                        "endColumn": 80,
+                        "endOffset": 254
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 259,
+                    "endColumn": 90,
+                    "endOffset": 345
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-es/values-es.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 259,
+                        "endColumn": 90,
+                        "endOffset": 345
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/values-es/values-es.xml",
         "map": [
             {

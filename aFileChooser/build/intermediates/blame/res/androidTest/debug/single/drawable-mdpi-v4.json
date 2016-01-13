@@ -1,7 +1,15 @@
 [
     {
+        "merged": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_chooser.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_chooser.png"
+    },
+    {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_provider.png",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_provider.png"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_folder.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_folder.png"
     },
     {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_file.png",
@@ -10,6 +18,14 @@
     {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_chooser.png",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_chooser.png"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_file.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_file.png"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_provider.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_provider.png"
     },
     {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_folder.png",

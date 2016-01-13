@@ -4,12 +4,24 @@
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_folder.png"
     },
     {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_provider.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_provider.png"
+    },
+    {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/drawable-mdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_folder.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_folder.png"
+    },
+    {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_file.png",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_file.png"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_file.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_file.png"
     },
     {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_provider.png",
@@ -18,5 +30,13 @@
     {
         "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_chooser.png",
         "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_chooser.png"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_chooser.png",
+        "source": "/home/allen/GitProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/drawable-mdpi-v4/ic_chooser.png"
     }
 ]

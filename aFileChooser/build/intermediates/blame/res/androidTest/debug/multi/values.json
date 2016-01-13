@@ -1,5 +1,202 @@
 [
     {
+        "outputFile": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 41,
+                    "endOffset": 92
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 41,
+                        "endOffset": 92
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 97,
+                    "endColumn": 42,
+                    "endOffset": 135
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 42,
+                        "endOffset": 135
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 140,
+                    "endColumn": 48,
+                    "endOffset": 184
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 140,
+                        "endColumn": 48,
+                        "endOffset": 184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 189,
+                    "endColumn": 42,
+                    "endOffset": 227
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 189,
+                        "endColumn": 42,
+                        "endOffset": 227
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 232,
+                    "endColumn": 53,
+                    "endOffset": 281
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 232,
+                        "endColumn": 53,
+                        "endOffset": 281
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 286,
+                    "endColumn": 59,
+                    "endOffset": 341
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 286,
+                        "endColumn": 59,
+                        "endOffset": 341
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 346,
+                    "endColumn": 69,
+                    "endOffset": 411
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 346,
+                        "endColumn": 69,
+                        "endOffset": 411
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 416,
+                    "endColumn": 61,
+                    "endOffset": 473
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 416,
+                        "endColumn": 61,
+                        "endOffset": 473
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 478,
+                    "endColumn": 77,
+                    "endOffset": 551
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 478,
+                        "endColumn": 77,
+                        "endOffset": 551
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 556,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 1066
+                },
+                "from": {
+                    "file": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 556,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 1066
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/values/values.xml",
         "map": [
             {
