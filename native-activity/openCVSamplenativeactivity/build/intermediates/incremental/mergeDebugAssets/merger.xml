@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="/home/allen/AndroidStudioProjects/native-activity/openCVSamplenativeactivity/build/intermediates/exploded-aar/native-activity/openCVLibrary249/unspecified/assets"/></dataSet><dataSet config="main"><source path="/home/allen/AndroidStudioProjects/native-activity/openCVSamplenativeactivity/src/main/assets"/></dataSet><dataSet config="debug"><source path="/home/allen/AndroidStudioProjects/native-activity/openCVSamplenativeactivity/src/debug/assets"/></dataSet></merger>

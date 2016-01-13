@@ -1,0 +1,2 @@
+include ':openCVLibrary249'
+include ':openCVTutorial1CameraPreview'

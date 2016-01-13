@@ -1,0 +1,83 @@
+[
+    {
+        "outputFile": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/values-it/values-it.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 59,
+                    "endOffset": 110
+                },
+                "from": {
+                    "file": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 59,
+                        "endOffset": 110
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 115,
+                    "endColumn": 59,
+                    "endOffset": 170
+                },
+                "from": {
+                    "file": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endColumn": 59,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 175,
+                    "endColumn": 79,
+                    "endOffset": 250
+                },
+                "from": {
+                    "file": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endColumn": 79,
+                        "endOffset": 250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 255,
+                    "endColumn": 98,
+                    "endOffset": 349
+                },
+                "from": {
+                    "file": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 255,
+                        "endColumn": 98,
+                        "endOffset": 349
+                    }
+                }
+            }
+        ]
+    }
+]

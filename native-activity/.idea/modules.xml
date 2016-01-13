@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/native-activity.iml" filepath="$PROJECT_DIR$/native-activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary249/openCVLibrary249.iml" filepath="$PROJECT_DIR$/openCVLibrary249/openCVLibrary249.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVSamplenativeactivity/openCVSamplenativeactivity.iml" filepath="$PROJECT_DIR$/openCVSamplenativeactivity/openCVSamplenativeactivity.iml" />
+    </modules>
+  </component>
+</project>

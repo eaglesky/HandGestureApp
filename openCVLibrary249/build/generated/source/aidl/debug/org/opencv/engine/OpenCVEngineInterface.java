@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /home/allen/GitProjects/HandGestureApp/openCVLibrary249/src/main/aidl/org/opencv/engine/OpenCVEngineInterface.aidl
+ * Original file: /home/allen/AndroidStudioProjects/HandGestureApp/openCVLibrary249/src/main/aidl/org/opencv/engine/OpenCVEngineInterface.aidl
  */
 package org.opencv.engine;
 /**

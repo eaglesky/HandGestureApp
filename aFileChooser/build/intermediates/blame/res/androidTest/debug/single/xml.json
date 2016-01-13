@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/xml/mimetypes.xml",
-        "source": "/home/allen/GitProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/xml/mimetypes.xml"
-    },
-    {
-        "merged": "/home/allen/Downloads/HandGestureApp-master/aFileChooser/build/intermediates/res/merged/androidTest/debug/xml/mimetypes.xml",
-        "source": "/home/allen/Downloads/HandGestureApp-master/aFileChooser/build/intermediates/bundles/debug/res/xml/mimetypes.xml"
+        "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/res/merged/androidTest/debug/xml/mimetypes.xml",
+        "source": "/home/allen/AndroidStudioProjects/HandGestureApp/aFileChooser/build/intermediates/bundles/debug/res/xml/mimetypes.xml"
     }
 ]

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/layout/file.xml",
+        "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/exploded-aar/HandGestureApp/aFileChooser/unspecified/res/layout/file.xml"
+    },
+    {
+        "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/layout/browse_app_list.xml",
+        "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/layout/browse_app_list.xml"
+    },
+    {
+        "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/layout/browse_app_item.xml",
+        "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/layout/browse_app_item.xml"
+    },
+    {
+        "merged": "/home/allen/AndroidStudioProjects/HandGestureApp/app/build/intermediates/res/merged/debug/layout/activity_display_app_list.xml",
+        "source": "/home/allen/AndroidStudioProjects/HandGestureApp/app/src/main/res/layout/activity_display_app_list.xml"
+    }
+]
