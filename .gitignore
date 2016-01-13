@@ -6,3 +6,6 @@
 .DS_Store
 /build
 /captures
+app/build
+aFileChooser/build
+openCVLibrary249/build

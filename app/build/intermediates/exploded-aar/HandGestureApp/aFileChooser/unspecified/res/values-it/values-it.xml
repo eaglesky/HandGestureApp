@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="choose_file">Selezionare un file</string>
-    <string name="empty_directory">Directory vuota</string>
-    <string name="error_selecting_file">Errore nel selezionare il File</string>
-    <string name="storage_removed">Lo spazio di archiviazione è stato rimosso o smontato.</string>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="choose_file">Выберите файл</string>
-    <string name="empty_directory">Пустая папка</string>
-    <string name="error_selecting_file">Ошибка при выборе файла</string>
-    <string name="storage_removed">Storage was removed or unmounted.</string>
-</resources>
